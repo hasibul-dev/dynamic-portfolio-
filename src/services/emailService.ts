@@ -1,50 +1,30 @@
 import type { ContactFormData } from '@/types';
+import emailjs from '@emailjs/browser';
+
+// EmailJS configuration
+const EMAILJS_PUBLIC_KEY = 'q4_LZbC5qRjZ1BG0A';
+const EMAILJS_SERVICE_ID = 'service_0dtcu1e';
+const EMAILJS_TEMPLATE_ID = 'template_kphhyn9';
 
 export const emailService = {
-  // Send contact form email
+  // Send contact form email via EmailJS
   sendContactEmail: async (formData: ContactFormData): Promise<void> => {
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject_matrix: formData.subject,
+        message: formData.message,
+      };
 
-      if (!response.ok) {
-        throw new Error('Failed to send email');
-      }
-    } catch (error) {
-      console.error('Email service error:', error);
-      throw error;
-    }
-  },
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
 
-  // Send contact email via Resend (for Vercel serverless)
-  sendViaResend: async (formData: ContactFormData): Promise<void> => {
-    try {
-      const response = await fetch('/api/mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: 'your-email@example.com',
-          from: 'noreply@portfolio.com',
-          subject: `New Contact Form Submission: ${formData.subject}`,
-          html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${formData.name}</p>
-            <p><strong>Email:</strong> ${formData.email}</p>
-            <p><strong>Subject:</strong> ${formData.subject}</p>
-            <p><strong>Message:</strong></p>
-            <p>${formData.message.replace(/\n/g, '<br>')}</p>
-          `,
-        }),
-      });
-
-      if (!response.ok) {
+      if (response.status !== 200) {
         throw new Error('Failed to send email');
       }
     } catch (error) {
@@ -53,3 +33,4 @@ export const emailService = {
     }
   },
 };
+

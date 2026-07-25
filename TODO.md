@@ -9,3 +9,7 @@
 
 - [x] Verify build/lint by running `npm test` or `npm run build`.
 
+- [x] Integrate EmailJS to send contact form submissions to hasibulhassan.info@gmail.com
+
+
+

@@ -11,6 +11,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@supabase/auth-helpers-react": "^0.4.1",
     "@supabase/supabase-js": "^2.108.2",
     "axios": "^1.6.2",
