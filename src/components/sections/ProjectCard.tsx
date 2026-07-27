@@ -10,19 +10,19 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card className="overflow-hidden flex flex-col h-full bg-gradient-to-br from-white/[0.04] to-transparent border-t border-l border-white/[0.12] border-r-transparent border-b-transparent rounded-tr-3xl rounded-bl-3xl rounded-tl-sm rounded-br-sm group transition-all duration-500 hover:border-t-[#FCB045]/40 hover:border-l-[#FD1D1D]/40 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.9),0_0_40px_rgba(253,29,29,0.02)] backdrop-blur-xl p-5 relative select-none transform hover:-translate-y-1">
+    <Card className="overflow-hidden flex flex-col h-full bg-gradient-to-br from-white/[0.04] to-transparent border-t border-l border-white/[0.12] border-r-transparent border-b-transparent rounded-tr-3xl rounded-bl-3xl rounded-tl-sm rounded-br-sm group transition-all duration-500 hover:border-t-[#7CFF00]/40 hover:border-l-[#7CFF00]/40 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.9),0_0_40px_rgba(124,255,0,0.02)] backdrop-blur-xl p-5 relative select-none transform hover:-translate-y-1">
       
       {/* Dynamic Cyber Grid Mesh Accent Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:20px_20px] opacity-40 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
       {/* Futuristic Index Corner Shield Badge */}
-      <div className="absolute top-0 left-0 bg-gradient-to-r from-[#FD1D1D] to-[#FCB045] h-[2px] w-8 group-hover:w-16 transition-all duration-500 rounded-full" />
-      <div className="absolute top-0 left-0 bg-gradient-to-b from-[#FD1D1D] to-[#FCB045] w-[2px] h-8 group-hover:h-16 transition-all duration-500 rounded-full" />
+      <div className="absolute top-0 left-0 bg-gradient-to-r from-[#7CFF00] to-[#A6FF00] h-[2px] w-8 group-hover:w-16 transition-all duration-500 rounded-full" />
+      <div className="absolute top-0 left-0 bg-gradient-to-b from-[#7CFF00] to-[#A6FF00] w-[2px] h-8 group-hover:h-16 transition-all duration-500 rounded-full" />
 
       {/* Top Holographic Infrastructure Track Head */}
       <div className="flex items-center justify-between mb-4 pb-2.5 border-b border-white/[0.04] font-mono text-[9px] text-neutral-500 tracking-widest uppercase">
         <span className="group-hover:text-neutral-300 transition-colors">NODE // {project.sector}</span>
-        <span className="text-[#FCB045]/60 group-hover:text-[#FCB045] transition-colors font-semibold">PRJ-X01</span>
+        <span className="text-[#7CFF00]/60 group-hover:text-[#7CFF00] transition-colors font-semibold">PRJ-X01</span>
       </div>
 
       {/* Ultra-Slim Glass Wrapped Media Chamber */}
@@ -34,7 +34,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         />
         
         {/* Cinematic High-Depth Shadow Mask Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#040404] via-black/20 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/20 to-transparent opacity-80 group-hover:opacity-50 transition-opacity duration-500" />
       </div>
 
       {/* Core Operational Text Body Wrapper */}
@@ -43,7 +43,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div>
           {/* Active Framework Line Indicator */}
           <div className="mb-2 flex items-center gap-2">
-            <span className="w-1 h-3 rounded-full bg-gradient-to-b from-[#FD1D1D] to-[#FCB045]" />
+            <span className="w-1 h-3 rounded-full bg-gradient-to-b from-[#7CFF00] to-[#A6FF00]" />
             <h3 className="text-sm font-bold tracking-wide text-neutral-200 group-hover:text-white transition-colors duration-300 antialiased line-clamp-1">
               {project.title}
             </h3>
@@ -69,7 +69,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </span>
             ))}
             {project.technologies.length > 3 && (
-              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded-sm bg-[#1a0a03] border border-[#FCB045]/20 text-[#FCB045] font-bold">
+              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded-sm bg-[#0A1A00] border border-[#7CFF00]/20 text-[#7CFF00] font-bold">
                 +{project.technologies.length - 3}
               </span>
             )}
@@ -83,9 +83,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-1.5 text-white py-1.5 rounded-lg font-bold tracking-widest relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_20px_rgba(253,29,29,0.25)] transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="flex-1 flex items-center justify-center gap-1.5 text-black py-1.5 rounded-lg font-bold tracking-widest relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_20px_rgba(124,255,0,0.25)] transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
               style={{
-                background: 'linear-gradient(135deg, #FD1D1D, #FCB045)'
+                background: 'linear-gradient(135deg, #7CFF00, #A6FF00)'
               }}
             >
               {/* Kinetic light reflection scan */}

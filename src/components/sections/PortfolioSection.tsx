@@ -25,10 +25,10 @@ export const PortfolioSection: React.FC = () => {
   }, [selectedSector, projects]);
 
   return (
-    <section id="portfolio" ref={sectionRef} className="relative bg-[#020202] py-24 px-4 overflow-hidden select-none">
-      <div className="absolute inset-0 opacity-[0.015] bg-[radial-gradient(#FD1D1D_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
-      <div className="absolute top-0 right-10 w-[350px] h-[350px] bg-[#FCB045]/5 rounded-full blur-[120px] pointer-events-none animate-pulse" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#FD1D1D]/5 rounded-full blur-[150px] pointer-events-none" />
+    <section id="portfolio" ref={sectionRef} className="relative bg-[#0D0D0D] py-24 px-4 overflow-hidden select-none">
+      <div className="absolute inset-0 opacity-[0.015] bg-[radial-gradient(#7CFF00_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+      <div className="absolute top-0 right-10 w-[350px] h-[350px] bg-[#7CFF00]/5 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#A6FF00]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <style>{`
         @keyframes scanline {
@@ -39,7 +39,7 @@ export const PortfolioSection: React.FC = () => {
           content: " ";
           position: absolute;
           top: 0; left: 0; right: 0; bottom: 0;
-          background: linear-gradient(to bottom, transparent 50%, rgba(253, 29, 29, 0.1) 50%), linear-gradient(to right, rgba(253, 29, 29, 0.05), rgba(252, 176, 69, 0.05));
+          background: linear-gradient(to bottom, transparent 50%, rgba(124, 255, 0, 0.1) 50%), linear-gradient(to right, rgba(124, 255, 0, 0.05), rgba(166, 255, 0, 0.05));
           background-size: 100% 4px, 4px 100%;
           animation: scanline 0.4s linear infinite;
           pointer-events: none;
@@ -53,15 +53,15 @@ export const PortfolioSection: React.FC = () => {
         <div className={`mb-16 border-b border-neutral-900/60 pb-8 flex flex-col md:flex-row items-start md:items-end justify-between gap-6 transition-all duration-1000 ${sectionVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <Terminal size={14} style={{ color: '#FD1D1D' }} className="animate-pulse" />
+              <Terminal size={14} style={{ color: '#7CFF00' }} className="animate-pulse" />
               <span className="text-[10px] font-mono tracking-[0.3em] text-neutral-500 uppercase">System Index Deployment</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD1D1D] via-[#FD1D1D] to-[#FCB045]">Projects</span>
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7CFF00] via-[#7CFF00] to-[#A6FF00]">Projects</span>
             </h2>
           </div>
-          <div className="flex items-center gap-3 bg-[#070707] border border-neutral-900 px-4 py-2 rounded-xl font-mono text-[11px] text-neutral-400">
-            <Cpu size={14} style={{ color: '#FCB045' }} />
+          <div className="flex items-center gap-3 bg-[#111111] border border-neutral-900 px-4 py-2 rounded-xl font-mono text-[11px] text-neutral-400">
+            <Cpu size={14} style={{ color: '#7CFF00' }} />
             <span>Grid Layout Active</span>
           </div>
         </div>
@@ -82,12 +82,12 @@ export const PortfolioSection: React.FC = () => {
                   onClick={() => setSelectedSector(sector.slug)}
                   className={`w-full px-4 py-3 rounded-xl font-mono text-xs font-bold uppercase tracking-widest text-left transition-all duration-300 relative group overflow-hidden border ${
                     isActive
-                      ? 'border-[#FD1D1D]/30 text-white shadow-xl shadow-[#FD1D1D]/5 bg-neutral-900/40'
-                      : 'border-neutral-900 bg-[#060606]/40 text-neutral-500 hover:text-neutral-300 hover:border-neutral-800'
+                      ? 'border-[#7CFF00]/30 text-white shadow-xl shadow-[#7CFF00]/5 bg-neutral-900/40'
+                      : 'border-neutral-900 bg-[#111111]/40 text-neutral-500 hover:text-neutral-300 hover:border-neutral-800'
                   }`}
                 >
                   {isActive && (
-                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#FD1D1D] to-[#FCB045]" />
+                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#7CFF00] to-[#A6FF00]" />
                   )}
 
                   <div className="flex justify-between items-center relative z-10">
@@ -119,7 +119,7 @@ export const PortfolioSection: React.FC = () => {
                   {filteredProjects.map((project, idx) => (
                     <div
                       key={project.id}
-                      className={`group/item rounded-xl border bg-[#050505] transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/50 border-neutral-900/70 hover:border-[#FD1D1D]/30 ${
+                      className={`group/item rounded-xl border bg-[#050505] transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/50 border-neutral-900/70 hover:border-[#7CFF00]/30 ${
                         sectionVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-6'
                       }`}
                       style={{ 
@@ -127,8 +127,8 @@ export const PortfolioSection: React.FC = () => {
                       }}
                     >
                       <div className="relative h-full overflow-hidden p-1">
-                        <div className="absolute top-0 right-0 w-12 h-[1px] bg-gradient-to-r from-transparent to-neutral-800 group-hover/item:to-[#FCB045]/40 transition-colors z-20" />
-                        <div className="absolute bottom-0 left-0 w-[1px] h-12 bg-gradient-to-b from-transparent to-neutral-800 group-hover/item:to-[#FD1D1D]/40 transition-colors z-20" />
+                        <div className="absolute top-0 right-0 w-12 h-[1px] bg-gradient-to-r from-transparent to-neutral-800 group-hover/item:to-[#7CFF00]/40 transition-colors z-20" />
+                        <div className="absolute bottom-0 left-0 w-[1px] h-12 bg-gradient-to-b from-transparent to-neutral-800 group-hover/item:to-[#7CFF00]/40 transition-colors z-20" />
 
                         <ProjectCard project={project} />
                       </div>
@@ -138,7 +138,7 @@ export const PortfolioSection: React.FC = () => {
               ) : (
                 <div className="text-center py-24 bg-neutral-950/30 border border-neutral-900/60 rounded-3xl backdrop-blur-sm">
                   <div className="inline-block p-8 rounded-2xl bg-[#050505] border border-neutral-900 relative max-w-sm">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-gradient-to-r from-[#FD1D1D] to-[#FCB045]" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-gradient-to-r from-[#7CFF00] to-[#A6FF00]" />
                     <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center justify-center">
                       <FolderGit2 size={20} className="text-neutral-600" />
                     </div>
@@ -159,3 +159,4 @@ export const PortfolioSection: React.FC = () => {
     </section>
   );
 };
+

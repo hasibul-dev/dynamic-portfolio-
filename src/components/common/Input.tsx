@@ -24,7 +24,7 @@ export const Input: React.FC<InputProps> = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-sm font-semibold mb-2 text-gray-200"
+          className="block text-sm font-semibold mb-2 text-[#D9D9D9]"
         >
           {label}
           {props.required && <span className="text-danger ml-1">*</span>}
@@ -41,14 +41,14 @@ export const Input: React.FC<InputProps> = ({
           className={cn(
             'input-field',
             icon ? 'pl-10' : '',
-            error ? 'border-danger focus:border-danger focus:ring-danger' : '',
+            error ? 'border-[#EF4444] focus:border-[#EF4444] focus:ring-[#EF4444]' : '',
             className
           )}
           {...props}
         />
       </div>
       {error && (
-        <p className="text-danger text-sm mt-1">{error}</p>
+        <p className="text-[#EF4444] text-sm mt-1">{error}</p>
       )}
       {helpText && !error && (
         <p className="text-gray-400 text-sm mt-1">{helpText}</p>

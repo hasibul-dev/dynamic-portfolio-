@@ -31,19 +31,19 @@ export const ProjectsTable: React.FC<ProjectsTableProps> = ({ projects, onEdit }
     <div className="overflow-x-auto">
       <table className="w-full">
         <thead>
-          <tr className="border-b border-gray-700">
-            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-300">Title</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-300">Sector</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-300">Technologies</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-300">Created</th>
-            <th className="px-4 py-3 text-right text-sm font-semibold text-gray-300">Actions</th>
+          <tr className="border-b border-white/10">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-[#D9D9D9]">Title</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-[#D9D9D9]">Sector</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-[#D9D9D9]">Technologies</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-[#D9D9D9]">Created</th>
+            <th className="px-4 py-3 text-right text-sm font-semibold text-[#D9D9D9]">Actions</th>
           </tr>
         </thead>
         <tbody>
           {projects.map((project) => (
             <tr
               key={project.id}
-              className="border-b border-gray-700 hover:bg-secondary transition"
+              className="border-b border-white/10 hover:bg-[#0D0D0D] transition"
             >
               <td className="px-4 py-3 text-sm">
                 <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ export const ProjectsTable: React.FC<ProjectsTableProps> = ({ projects, onEdit }
                 </div>
               </td>
               <td className="px-4 py-3 text-sm">
-                <span className="badge bg-blue-900 text-blue-300">{project.sector}</span>
+                <span className="badge">{project.sector}</span>
               </td>
               <td className="px-4 py-3 text-sm">
                 <p className="text-gray-300">
@@ -79,7 +79,7 @@ export const ProjectsTable: React.FC<ProjectsTableProps> = ({ projects, onEdit }
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 text-gray-400 hover:text-accent transition"
+                    className="p-2 text-gray-400 hover:text-[#7CFF00] transition"
                     title="View Live"
                   >
                     <ExternalLink size={18} />
@@ -88,7 +88,7 @@ export const ProjectsTable: React.FC<ProjectsTableProps> = ({ projects, onEdit }
                   {/* Edit */}
                   <button
                     onClick={() => onEdit(project.id)}
-                    className="p-2 text-gray-400 hover:text-accent transition"
+                    className="p-2 text-gray-400 hover:text-[#7CFF00] transition"
                     title="Edit"
                   >
                     <Edit2 size={18} />
@@ -117,7 +117,7 @@ export const ProjectsTable: React.FC<ProjectsTableProps> = ({ projects, onEdit }
                   ) : (
                     <button
                       onClick={() => setConfirmDelete(project.id)}
-                      className="p-2 text-gray-400 hover:text-danger transition"
+                      className="p-2 text-gray-400 hover:text-[#EF4444] transition"
                       title="Delete"
                     >
                       <Trash2 size={18} />

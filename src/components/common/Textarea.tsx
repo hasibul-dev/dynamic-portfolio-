@@ -27,7 +27,7 @@ export const Textarea: React.FC<TextareaProps> = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-sm font-semibold mb-2 text-gray-200"
+          className="block text-sm font-semibold mb-2 text-[#D9D9D9]"
         >
           {label}
           {props.required && <span className="text-danger ml-1">*</span>}
@@ -37,7 +37,7 @@ export const Textarea: React.FC<TextareaProps> = ({
         id={inputId}
         className={cn(
           'textarea-field',
-          error ? 'border-danger focus:border-danger focus:ring-danger' : '',
+          error ? 'border-[#EF4444] focus:border-[#EF4444] focus:ring-[#EF4444]' : '',
           className
         )}
         maxLength={maxLength}
@@ -47,7 +47,7 @@ export const Textarea: React.FC<TextareaProps> = ({
       <div className="flex justify-between items-center mt-1">
         <div>
           {error && (
-            <p className="text-danger text-sm">{error}</p>
+            <p className="text-[#EF4444] text-sm">{error}</p>
           )}
           {helpText && !error && (
             <p className="text-gray-400 text-sm">{helpText}</p>

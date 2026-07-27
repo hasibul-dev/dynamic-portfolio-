@@ -44,8 +44,8 @@ export const Footer: React.FC = () => {
 
   const socials = [
     { href: SOCIAL_LINKS.github, icon: Github, label: 'GitHub', bg: 'hover:bg-neutral-800/40 hover:text-white' },
-    { href: SOCIAL_LINKS.linkedin, icon: Linkedin, label: 'LinkedIn', bg: 'hover:bg-[#FD1D1D]/10 hover:text-[#FCB045]' },
-    { href: SOCIAL_LINKS.facebook, icon: Facebook, label: 'Facebook', bg: 'hover:bg-[#FD1D1D]/10 hover:text-[#FCB045]' },
+    { href: SOCIAL_LINKS.linkedin, icon: Linkedin, label: 'LinkedIn', bg: 'hover:bg-[#7CFF00]/10 hover:text-[#7CFF00]' },
+    { href: SOCIAL_LINKS.facebook, icon: Facebook, label: 'Facebook', bg: 'hover:bg-[#7CFF00]/10 hover:text-[#7CFF00]' },
   ];
 
   return (
@@ -60,29 +60,29 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* High-tech abstract lighting & glow ambient effects */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#FD1D1D]/8 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-[#FCB045]/8 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#7CFF00]/8 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-[#A6FF00]/8 rounded-full blur-[150px] pointer-events-none mix-blend-screen" />
 
       <div className="relative z-10 max-w-[1700px] mx-auto px-4 md:px-8">
         
         {/* SECTION 1: Minimalist heading & Mega CTA */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: '#FCB045' }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: '#7CFF00' }}>
               <Sparkles size={12} className="animate-spin" style={{ animationDuration: '3s' }} />
               <span>Let's collaborate</span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               Ready to bring your <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD1D1D] to-[#FCB045]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7CFF00] to-[#A6FF00]">
                 next big idea to life?
               </span>
             </h2>
           </div>
           
           {/* CTA Button with smooth hover effects */}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="group relative inline-flex items-center justify-center p-4 px-8 py-4 overflow-hidden font-bold rounded-2xl bg-white text-black transition-all duration-300 ease-out shadow-xl shadow-white/5 hover:scale-[1.05] hover:shadow-orange-500/10">
-            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-gradient-to-r from-[#FD1D1D] to-[#FCB045] group-hover:translate-x-0 ease-out">
+          <a href={`mailto:${CONTACT_EMAIL}`} className="group relative inline-flex items-center justify-center p-4 px-8 py-4 overflow-hidden font-bold rounded-2xl bg-white text-black transition-all duration-300 ease-out shadow-xl shadow-white/5 hover:scale-[1.05] hover:shadow-[#7CFF00]/10">
+            <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-gradient-to-r from-[#7CFF00] to-[#A6FF00] group-hover:translate-x-0 ease-out">
               <ArrowRight size={20} />
             </span>
             <span className="absolute flex items-center justify-center w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease-out">
@@ -108,7 +108,7 @@ export const Footer: React.FC = () => {
                     className="text-sm text-neutral-400 hover:text-white font-medium transition-colors duration-200 cursor-pointer flex items-center gap-1 group/link"
                   >
                     <span>{label}</span>
-                    <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" style={{ color: '#FCB045' }} />
+                    <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" style={{ color: '#7CFF00' }} />
                   </a>
                 ))}
               </div>
@@ -124,21 +124,21 @@ export const Footer: React.FC = () => {
               <h3 className="text-xs font-bold text-neutral-500 uppercase tracking-widest mb-6 group-hover:text-neutral-400 transition-colors">Connect Directly</h3>
               <div className="space-y-4">
                 <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center gap-3 text-neutral-300 hover:text-white transition-colors group/item">
-                  <div className="w-9 h-9 rounded-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.05] group-hover/item:border-[#FD1D1D]/40 group-hover/item:bg-[#FD1D1D]/5 transition-all duration-300">
-                    <Mail size={16} className="group-hover/item:text-[#FD1D1D] transition-colors" />
+                  <div className="w-9 h-9 rounded-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.05] group-hover/item:border-[#7CFF00]/40 group-hover/item:bg-[#7CFF00]/5 transition-all duration-300">
+                    <Mail size={16} className="group-hover/item:text-[#7CFF00] transition-colors" />
                   </div>
                   <span className="text-sm font-medium truncate">{CONTACT_EMAIL}</span>
                 </a>
                 <a href={`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-neutral-300 hover:text-white transition-colors group/item">
-                  <div className="w-9 h-9 rounded-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.05] group-hover/item:border-[#FCB045]/40 group-hover/item:bg-[#FCB045]/5 transition-all duration-300">
-                    <Phone size={16} className="group-hover/item:text-[#FCB045] transition-colors" />
+                  <div className="w-9 h-9 rounded-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.05] group-hover/item:border-[#A6FF00]/40 group-hover/item:bg-[#A6FF00]/5 transition-all duration-300">
+                    <Phone size={16} className="group-hover/item:text-[#A6FF00] transition-colors" />
                   </div>
                   <span className="text-sm font-medium">{CONTACT_PHONE_DISPLAY}</span>
                 </a>
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-white/[0.05] flex items-center gap-2 text-xs text-neutral-500 group-hover:text-neutral-400 transition-colors">
-              <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#FCB045' }} />
+              <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#7CFF00' }} />
               <span>Available for freelance contracts</span>
             </div>
           </div>
@@ -163,7 +163,7 @@ export const Footer: React.FC = () => {
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-white/[0.05]">
-              <span className="text-base font-bold tracking-wide block mb-1 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#FCB045] transition-all duration-300" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <span className="text-base font-bold tracking-wide block mb-1 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#7CFF00] transition-all duration-300" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 Hasibul Hassan
               </span>
               <span className="text-[11px] text-neutral-500 block leading-tight group-hover:text-neutral-400 transition-colors">
@@ -179,7 +179,7 @@ export const Footer: React.FC = () => {
           <div className="text-neutral-500 text-xs font-medium text-center sm:text-left">
             <span>&copy; {currentYear} {NICKNAME}. All rights reserved. </span>
             <span className="block sm:inline sm:ml-2 mt-1 sm:mt-0 text-neutral-600">
-              Made with <Heart size={10} className="inline text-[#FD1D1D] fill-[#FD1D1D] mx-0.5" /> in Bangladesh
+              Made with <Heart size={10} className="inline text-[#7CFF00] fill-[#7CFF00] mx-0.5" /> in Bangladesh
             </span>
           </div>
           

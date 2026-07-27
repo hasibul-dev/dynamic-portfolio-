@@ -19,21 +19,21 @@ export const WhatsAppButton: React.FC = () => {
     >
       {/* Tooltip */}
       {isHovered && (
-        <div className="absolute bottom-full right-0 mb-4 px-4 py-2 bg-slate-900 text-white text-sm rounded-lg whitespace-nowrap shadow-lg animate-slideUp border border-gray-700/50">
+        <div className="absolute bottom-full right-0 mb-4 px-4 py-2 bg-[#0D0D0D] text-white text-sm rounded-lg whitespace-nowrap shadow-lg animate-slideUp border border-[#7CFF00]/30">
           Chat with us on WhatsApp
-          <div className="absolute -bottom-1 right-4 w-2 h-2 bg-slate-900 transform rotate-45"></div>
+          <div className="absolute -bottom-1 right-4 w-2 h-2 bg-[#0D0D0D] transform rotate-45 border-r border-b border-[#7CFF00]/30"></div>
         </div>
       )}
 
       {/* Button */}
       <div className="relative">
         {/* Pulse ring effect */}
-        <div className="absolute inset-0 bg-green-500 rounded-full animate-pulse opacity-20"></div>
-        <div className="absolute inset-1 bg-green-500 rounded-full animate-pulse opacity-40" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute inset-0 bg-[#7CFF00] rounded-full animate-pulse opacity-20"></div>
+        <div className="absolute inset-1 bg-[#7CFF00] rounded-full animate-pulse opacity-40" style={{ animationDelay: '0.5s' }}></div>
 
         {/* Main button */}
-        <button className="relative w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl hover:shadow-green-500/50 transform hover:scale-110 transition-all duration-300 group">
-          <MessageCircle size={28} className="text-white group-hover:rotate-12 transition-transform" />
+        <button className="relative w-16 h-16 bg-gradient-to-br from-[#7CFF00] to-[#39FF14] hover:from-[#76FF03] hover:to-[#7CFF00] rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl hover:shadow-[#7CFF00]/50 transform hover:scale-110 transition-all duration-300 group">
+          <MessageCircle size={28} className="text-black group-hover:rotate-12 transition-transform" />
         </button>
       </div>
     </a>

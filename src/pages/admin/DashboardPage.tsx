@@ -86,17 +86,17 @@ export const AdminDashboardPage: React.FC = () => {
       label: 'Total Projects',
       value: projects.length,
       icon: FolderKanban,
-      gradient: 'from-accent to-cyan-400',
-      bgGradient: 'from-accent/10 to-cyan-400/5',
-      shadowColor: 'shadow-accent/20',
+      gradient: 'from-[#7CFF00] to-[#39FF14]',
+      bgGradient: 'from-[#7CFF00]/10 to-[#39FF14]/5',
+      shadowColor: 'shadow-[#7CFF00]/20',
     },
     {
       label: 'Categories',
       value: uniqueSectors,
       icon: Layers,
-      gradient: 'from-purple-400 to-pink-400',
-      bgGradient: 'from-purple-400/10 to-pink-400/5',
-      shadowColor: 'shadow-purple-400/20',
+      gradient: 'from-[#76FF03] to-[#A6FF00]',
+      bgGradient: 'from-[#76FF03]/10 to-[#A6FF00]/5',
+      shadowColor: 'shadow-[#76FF03]/20',
     },
     {
       label: 'Last Update',
@@ -104,26 +104,26 @@ export const AdminDashboardPage: React.FC = () => {
         ? new Date(projects[0].updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
         : '—',
       icon: Clock,
-      gradient: 'from-orange-400 to-yellow-400',
-      bgGradient: 'from-orange-400/10 to-yellow-400/5',
-      shadowColor: 'shadow-orange-400/20',
+      gradient: 'from-[#7CFF00] to-[#A6FF00]',
+      bgGradient: 'from-[#7CFF00]/10 to-[#A6FF00]/5',
+      shadowColor: 'shadow-[#7CFF00]/20',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary via-slate-900 to-primary">
+    <div className="min-h-screen bg-gradient-to-br from-[#000000] via-[#0D0D0D] to-[#000000]">
       {/* Decorative background */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px]" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[150px]" />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#7CFF00]/5 rounded-full blur-[150px]" />
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-[#A6FF00]/5 rounded-full blur-[150px]" />
       </div>
 
       {/* Top Navbar */}
       <nav className="sticky top-0 z-30 glass border-b border-white/5 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center shadow-lg shadow-accent/30">
-              <Sparkles size={20} className="text-white" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#7CFF00] to-[#39FF14] flex items-center justify-center shadow-lg shadow-[#7CFF00]/30">
+              <Sparkles size={20} className="text-black" />
             </div>
             <div>
               <h1 className="text-lg font-bold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -152,7 +152,7 @@ export const AdminDashboardPage: React.FC = () => {
       <main className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-10">
         {/* Page Title */}
         <div className="mb-10">
-          <div className="flex items-center gap-2 text-accent text-sm font-semibold mb-2">
+          <div className="flex items-center gap-2 text-[#7CFF00] text-sm font-semibold mb-2">
             <LayoutDashboard size={16} />
             <span>Dashboard Overview</span>
           </div>
@@ -169,7 +169,7 @@ export const AdminDashboardPage: React.FC = () => {
           {stats.map(({ label, value, icon: Icon, gradient, bgGradient, shadowColor }) => (
             <div
               key={label}
-              className={`group relative p-6 rounded-2xl bg-gradient-to-br ${bgGradient} border border-white/10 hover:border-accent/30 transition-all duration-500 hover:-translate-y-1 shadow-lg ${shadowColor} overflow-hidden`}
+              className={`group relative p-6 rounded-2xl bg-gradient-to-br ${bgGradient} border border-white/10 hover:border-[#7CFF00]/30 transition-all duration-500 hover:-translate-y-1 shadow-lg ${shadowColor} overflow-hidden`}
             >
               <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-gradient-to-br opacity-10 blur-2xl group-hover:opacity-20 transition-opacity" />
               <div className="flex items-start justify-between relative z-10">
@@ -180,8 +180,8 @@ export const AdminDashboardPage: React.FC = () => {
                   </p>
                 </div>
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${gradient} p-0.5 shadow-lg`}>
-                  <div className="w-full h-full rounded-xl bg-primary/80 flex items-center justify-center">
-                    <Icon size={20} className="text-white" />
+                  <div className="w-full h-full rounded-xl bg-[#000000]/80 flex items-center justify-center">
+                    <Icon size={20} className="text-black" />
                   </div>
                 </div>
               </div>
@@ -217,7 +217,7 @@ export const AdminDashboardPage: React.FC = () => {
               placeholder="Search by title, description, or tech..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-accent/50 focus:outline-none focus:ring-2 focus:ring-accent/20 hover:border-white/20 transition-all backdrop-blur-xl text-sm"
+              className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-[#7CFF00]/50 focus:outline-none focus:ring-2 focus:ring-[#7CFF00]/20 hover:border-white/20 transition-all backdrop-blur-xl text-sm"
             />
             {searchQuery && (
               <button
@@ -234,11 +234,11 @@ export const AdminDashboardPage: React.FC = () => {
             <select
               value={filterSector}
               onChange={(e) => setFilterSector(e.target.value)}
-              className="appearance-none pl-11 pr-10 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-accent/50 focus:outline-none focus:ring-2 focus:ring-accent/20 hover:border-white/20 transition-all backdrop-blur-xl text-sm font-medium cursor-pointer"
+              className="appearance-none pl-11 pr-10 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-[#7CFF00]/50 focus:outline-none focus:ring-2 focus:ring-[#7CFF00]/20 hover:border-white/20 transition-all backdrop-blur-xl text-sm font-medium cursor-pointer"
             >
-              <option value="all" className="bg-primary">All Categories</option>
+              <option value="all" className="bg-[#000000]">All Categories</option>
               {PORTFOLIO_SECTORS.filter(s => s.slug !== 'all').map((sector) => (
-                <option key={sector.id} value={sector.slug} className="bg-primary">
+                <option key={sector.id} value={sector.slug} className="bg-[#000000]">
                   {sector.name}
                 </option>
               ))}
@@ -254,7 +254,7 @@ export const AdminDashboardPage: React.FC = () => {
         {/* Projects Grid */}
         {loading ? (
           <div className="flex flex-col items-center justify-center py-24">
-            <Loader2 size={48} className="text-accent animate-spin mb-4" />
+            <Loader2 size={48} className="text-[#7CFF00] animate-spin mb-4" />
             <p className="text-gray-400 font-medium">Loading your projects...</p>
           </div>
         ) : filteredProjects.length > 0 ? (
@@ -272,7 +272,7 @@ export const AdminDashboardPage: React.FC = () => {
         ) : (
           <div className="text-center py-24">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl glass-card mb-6">
-              <FolderKanban size={36} className="text-accent/60" />
+              <FolderKanban size={36} className="text-[#7CFF00]/60" />
             </div>
             <h4 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               {searchQuery || filterSector !== 'all' ? 'No matching projects' : 'No projects yet'}
@@ -344,9 +344,9 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
   const sectorName = PORTFOLIO_SECTORS.find(s => s.slug === project.sector)?.name || project.sector;
 
   return (
-    <div className="group relative rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 overflow-hidden hover:border-accent/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-accent/10">
+    <div className="group relative rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/10 overflow-hidden hover:border-[#7CFF00]/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#7CFF00]/10">
       {/* Image */}
-      <div className="relative aspect-video overflow-hidden bg-slate-900">
+      <div className="relative aspect-video overflow-hidden bg-[#0D0D0D]">
         {project.imageUrl ? (
           <img
             src={project.imageUrl}
@@ -359,16 +359,16 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
           </div>
         )}
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/90 via-[#000000]/20 to-transparent" />
 
         {/* Hover action overlay */}
-        <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+        <div className="absolute inset-0 bg-[#000000]/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
           {project.liveLink && (
             <a
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center text-white shadow-xl hover:scale-110 transition-transform"
+              className="w-11 h-11 rounded-xl bg-[#7CFF00] flex items-center justify-center text-black shadow-xl hover:scale-110 transition-transform"
               title="View Live"
             >
               <Eye size={18} />
@@ -376,7 +376,7 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
           )}
           <button
             onClick={onEdit}
-            className="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-xl hover:scale-110 hover:bg-accent hover:border-accent transition-all"
+            className="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-xl hover:scale-110 hover:bg-[#7CFF00] hover:border-[#7CFF00] transition-all"
             title="Edit"
           >
             <Edit3 size={18} />
@@ -393,7 +393,7 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
 
         {/* Sector badge */}
         <div className="absolute top-3 left-3">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary/80 backdrop-blur-md text-accent border border-accent/20">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-[#000000]/80 backdrop-blur-md text-[#7CFF00] border border-[#7CFF00]/20">
             {sectorName}
           </span>
         </div>
@@ -401,7 +401,7 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
 
       {/* Content */}
       <div className="p-5">
-        <h4 className="text-lg font-bold text-white mb-2 truncate group-hover:text-accent transition-colors" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+        <h4 className="text-lg font-bold text-white mb-2 truncate group-hover:text-[#7CFF00] transition-colors" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
           {project.title}
         </h4>
         <p className="text-gray-400 text-sm mb-4 line-clamp-2 leading-relaxed">
@@ -440,7 +440,7 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
           <div className="flex items-center gap-1">
             <button
               onClick={onEdit}
-              className="p-1.5 rounded-lg text-gray-500 hover:text-accent hover:bg-accent/10 transition-all"
+              className="p-1.5 rounded-lg text-gray-500 hover:text-[#7CFF00] hover:bg-[#7CFF00]/10 transition-all"
               title="Edit"
             >
               <Edit3 size={14} />
@@ -450,7 +450,7 @@ const ProjectAdminCard: React.FC<ProjectAdminCardProps> = ({
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 rounded-lg text-gray-500 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all"
+                className="p-1.5 rounded-lg text-gray-500 hover:text-[#7CFF00] hover:bg-[#7CFF00]/10 transition-all"
                 title="View Live"
               >
                 <ExternalLink size={14} />

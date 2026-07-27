@@ -18,7 +18,7 @@ const LiveDataBar: React.FC<{ skill: SkillItem; idx: number; isVisible: boolean;
 
   return (
     <div 
-      className="p-4 rounded-xl bg-gradient-to-b from-white/[0.03] to-white/[0.001] border border-white/[0.06] shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] group/bar relative overflow-hidden transition-all duration-500 hover:border-[#FCB045]/30 hover:-translate-y-0.5"
+      className="p-4 rounded-xl bg-gradient-to-b from-white/[0.03] to-white/[0.001] border border-white/[0.06] shadow-[inset_0_1px_2px_rgba(255,255,255,0.05)] group/bar relative overflow-hidden transition-all duration-500 hover:border-[#7CFF00]/30 hover:-translate-y-0.5"
       style={{
         transitionDelay: `${idx * 40}ms`,
         transform: triggerAnim ? 'translateY(0) scale(1)' : 'translateY(12px) scale(0.99)',
@@ -31,10 +31,10 @@ const LiveDataBar: React.FC<{ skill: SkillItem; idx: number; isVisible: boolean;
           <h4 className="text-sm font-semibold tracking-tight text-neutral-200 group-hover/bar:text-white transition-colors antialiased">{skill.name}</h4>
         </div>
         <div className="text-right">
-          <span className="text-[10px] font-mono font-semibold tracking-wide px-2 py-0.5 rounded bg-black/50 border border-white/[0.06] text-neutral-400 group-hover/bar:text-[#FCB045] transition-colors">
+          <span className="text-[10px] font-mono font-semibold tracking-wide px-2 py-0.5 rounded bg-black/50 border border-white/[0.06] text-neutral-400 group-hover/bar:text-[#7CFF00] transition-colors">
             {getStatus(skill.level)}
           </span>
-          <span className="text-sm font-bold font-mono block mt-1 antialiased" style={{ color: '#FCB045' }}>{skill.level}%</span>
+          <span className="text-sm font-bold font-mono block mt-1 antialiased" style={{ color: '#7CFF00' }}>{skill.level}%</span>
         </div>
       </div>
       <div className="w-full h-2 bg-black/60 rounded-sm relative overflow-hidden border border-white/[0.03]">
@@ -42,7 +42,7 @@ const LiveDataBar: React.FC<{ skill: SkillItem; idx: number; isVisible: boolean;
           className="h-full rounded-sm transition-all duration-1000 ease-out"
           style={{ 
             width: isVisible && triggerAnim ? `${skill.level}%` : '0%',
-            background: 'linear-gradient(to right, #FD1D1D, #FCB045)' 
+            background: 'linear-gradient(to right, #7CFF00, #A6FF00)' 
           }}
         >
           <div className="absolute inset-0 w-20 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skeleton-sweep" />
@@ -108,10 +108,10 @@ export const AboutSection: React.FC = () => {
   const ActiveIcon = categoryMeta[selectedCategory].icon;
 
   return (
-    <section id="about" ref={containerRef} className="relative bg-[#040404] py-28 px-4 overflow-hidden font-sans antialiased">
+    <section id="about" ref={containerRef} className="relative bg-[#050505] py-28 px-4 overflow-hidden font-sans antialiased">
       {/* Background Glows */}
-      <div className="absolute top-[-10%] left-1/4 w-[500px] h-[500px] bg-[#FD1D1D]/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-1/4 w-[500px] h-[500px] bg-[#FCB045]/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-[-10%] left-1/4 w-[500px] h-[500px] bg-[#7CFF00]/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-1/4 w-[500px] h-[500px] bg-[#A6FF00]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <style>{`
         @keyframes sweep {
@@ -128,7 +128,7 @@ export const AboutSection: React.FC = () => {
         {/* Section Header */}
         <div className={`mb-16 border-b border-white/[0.06] pb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-700 ${sectionVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div>
-            <span className="text-[10px] font-mono font-bold tracking-[0.25em] block mb-2" style={{ color: '#FD1D1D' }}>ENGINE INTERFACE // 2026</span>
+            <span className="text-[10px] font-mono font-bold tracking-[0.25em] block mb-2" style={{ color: '#7CFF00' }}>ENGINE INTERFACE // 2026</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               Technical Command Center
             </h2>
@@ -164,7 +164,7 @@ export const AboutSection: React.FC = () => {
                   >
                     <div className="flex items-center gap-4">
                       <div className={`w-10 h-10 rounded-xl bg-black/40 border flex items-center justify-center transition-colors ${
-                        isExpanded ? 'border-[#FCB045]/40 text-white' : 'border-white/[0.05] text-neutral-400'
+                        isExpanded ? 'border-[#7CFF00]/40 text-white' : 'border-white/[0.05] text-neutral-400'
                       }`}>
                         <Icon size={18} />
                       </div>
@@ -192,8 +192,8 @@ export const AboutSection: React.FC = () => {
                       </p>
                       
                       <div className="p-3 rounded-xl bg-black/40 border border-white/[0.05] text-[10px] font-mono tracking-wide text-neutral-400 leading-relaxed relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-1.5 h-full bg-gradient-to-b from-[#FD1D1D] to-[#FCB045]" />
-                        <span className="text-[9px] font-bold uppercase tracking-widest text-[#FCB045] block mb-1">AI SYSTEM FEED</span>
+                        <div className="absolute top-0 right-0 w-1.5 h-full bg-gradient-to-b from-[#7CFF00] to-[#A6FF00]" />
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-[#7CFF00] block mb-1">AI SYSTEM FEED</span>
                         {item.aiInsight}
                       </div>
                     </div>
@@ -214,7 +214,7 @@ export const AboutSection: React.FC = () => {
                     onClick={() => handleCategoryChange(tab)}
                     className={`px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
                       selectedCategory === tab
-                        ? 'bg-gradient-to-r from-[#FD1D1D] to-[#FCB045] text-white border-none shadow-lg shadow-[#FD1D1D]/15 scale-105'
+                        ? 'bg-gradient-to-r from-[#7CFF00] to-[#A6FF00] text-black border-none shadow-lg shadow-[#7CFF00]/15 scale-105'
                         : 'bg-black/20 text-neutral-500 border-white/[0.05] hover:text-neutral-300 hover:border-white/[0.12]'
                     }`}
                   >
@@ -227,7 +227,7 @@ export const AboutSection: React.FC = () => {
               <div className="flex items-center justify-between mb-6 bg-black/30 border border-white/[0.04] p-4 rounded-xl">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-black/40 border border-white/[0.05] flex items-center justify-center">
-                    <ActiveIcon size={16} style={{ color: '#FCB045' }} />
+                    <ActiveIcon size={16} style={{ color: '#7CFF00' }} />
                   </div>
                   <div>
                     <h3 className="text-[10px] font-bold font-mono uppercase text-neutral-400 tracking-widest mb-0.5">
@@ -269,7 +269,7 @@ export const AboutSection: React.FC = () => {
                   const el = document.getElementById('contact');
                   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
-                className="w-full sm:w-auto px-4 py-2 rounded-xl bg-white/[0.02] border border-white/[0.08] text-xs font-mono font-bold uppercase tracking-wider text-neutral-300 hover:text-white hover:border-[#FCB045]/40 transition-all duration-300 cursor-pointer shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl bg-white/[0.02] border border-white/[0.08] text-xs font-mono font-bold uppercase tracking-wider text-neutral-300 hover:text-white hover:border-[#7CFF00]/40 transition-all duration-300 cursor-pointer shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
               >
                 Inquire Stack Capabilities_
               </button>
@@ -282,3 +282,4 @@ export const AboutSection: React.FC = () => {
     </section>
   );
 };
+

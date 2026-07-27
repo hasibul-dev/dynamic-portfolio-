@@ -125,10 +125,10 @@ export const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
       <div className="w-full max-w-3xl my-8 rounded-3xl bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 shadow-2xl shadow-black/50 overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-white/10 bg-gradient-to-r from-accent/5 to-purple-500/5">
+        <div className="flex items-center justify-between p-6 border-b border-white/10 bg-gradient-to-r from-[#7CFF00]/5 to-[#A6FF00]/5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center shadow-lg shadow-accent/30">
-              <Sparkles size={18} className="text-white" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#7CFF00] to-[#39FF14] flex items-center justify-center shadow-lg shadow-[#7CFF00]/30">
+              <Sparkles size={18} className="text-black" />
             </div>
             <div>
               <h2 className="text-xl font-bold text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
@@ -157,7 +157,7 @@ export const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
             </label>
             {imagePreview ? (
               <div className="relative group rounded-2xl overflow-hidden border border-white/10">
-                <div className="aspect-video bg-slate-900">
+                <div className="aspect-video bg-[#0D0D0D]">
                   <img src={imagePreview} alt="Preview" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
@@ -184,9 +184,9 @@ export const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
                 </div>
               </div>
             ) : (
-              <label className="flex flex-col items-center justify-center w-full h-48 rounded-2xl border-2 border-dashed border-white/10 hover:border-accent/50 cursor-pointer transition-all bg-white/[0.02] hover:bg-accent/5 group">
-                <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <ImageIcon size={24} className="text-accent" />
+              <label className="flex flex-col items-center justify-center w-full h-48 rounded-2xl border-2 border-dashed border-white/10 hover:border-[#7CFF00]/50 cursor-pointer transition-all bg-white/[0.02] hover:bg-[#7CFF00]/5 group">
+                <div className="w-14 h-14 rounded-2xl bg-[#7CFF00]/10 border border-[#7CFF00]/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <ImageIcon size={24} className="text-[#7CFF00]" />
                 </div>
                 <p className="text-white font-semibold mb-1">Click to upload image</p>
                 <p className="text-gray-500 text-xs">PNG, JPG, WebP (max 5MB)</p>
@@ -239,7 +239,7 @@ export const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
                 disabled={submitting}
               >
                 {PORTFOLIO_SECTORS.filter(s => s.slug !== 'all').map((sector) => (
-                  <option key={sector.id} value={sector.slug} className="bg-primary">
+                  <option key={sector.id} value={sector.slug} className="bg-[#000000]">
                     {sector.name}
                   </option>
                 ))}
@@ -319,7 +319,7 @@ export const ProjectFormModal: React.FC<ProjectFormModalProps> = ({
                 {formData.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium bg-accent/10 text-accent border border-accent/20 hover:bg-red-500/10 hover:text-red-300 hover:border-red-500/30 transition-all cursor-pointer"
+                    className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium bg-[#7CFF00]/10 text-[#7CFF00] border border-[#7CFF00]/20 hover:bg-red-500/10 hover:text-red-300 hover:border-red-500/30 transition-all cursor-pointer"
                     onClick={() => handleRemoveTechnology(tech)}
                   >
                     {tech}

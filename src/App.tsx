@@ -13,7 +13,7 @@ function AppContent() {
   const isAdminRoute = location.pathname.startsWith('/admin');
 
   return (
-    <div className="min-h-screen flex flex-col bg-primary text-gray-100">
+    <div className="min-h-screen flex flex-col bg-[#000000] text-[#D9D9D9]">
       {!isAdminRoute && <Header />}
       <main className="flex-1">
         <Routes>
@@ -37,8 +37,8 @@ function AppContent() {
             element={
               <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
-                  <h1 className="text-6xl font-bold text-accent mb-4">404</h1>
-                  <p className="text-gray-400 mb-8">Page not found</p>
+                  <h1 className="text-6xl font-bold text-[#7CFF00] mb-4">404</h1>
+                  <p className="text-[#A0A0A0] mb-8">Page not found</p>
                   <a href="/" className="btn btn-primary">
                     Go Home
                   </a>

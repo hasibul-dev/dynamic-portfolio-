@@ -87,12 +87,12 @@ export const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="relative bg-[#040404] py-32 px-4 overflow-hidden antialiased">
+    <section id="contact" className="relative bg-[#050505] py-32 px-4 overflow-hidden antialiased">
       
       {/* Animated Fluid Ambient Background Fields */}
-      <div className="absolute top-[-10%] left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-[#FD1D1D]/8 to-transparent rounded-full blur-[150px] pointer-events-none animate-pulse duration-[8000ms]" />
-      <div className="absolute bottom-[-10%] right-1/4 w-[600px] h-[600px] bg-gradient-to-bl from-[#FCB045]/6 to-transparent rounded-full blur-[150px] pointer-events-none animate-pulse duration-[6000ms]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#040404_90%)] pointer-events-none" />
+      <div className="absolute top-[-10%] left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-[#7CFF00]/8 to-transparent rounded-full blur-[150px] pointer-events-none animate-pulse duration-[8000ms]" />
+      <div className="absolute bottom-[-10%] right-1/4 w-[600px] h-[600px] bg-gradient-to-bl from-[#A6FF00]/6 to-transparent rounded-full blur-[150px] pointer-events-none animate-pulse duration-[6000ms]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#050505_90%)] pointer-events-none" />
 
       {/* Subtle Dot Grid Overlay for Aesthetics */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -102,14 +102,14 @@ export const ContactSection: React.FC = () => {
         {/* Section Header with Dynamic Asymmetric Reveal */}
         <div ref={ref} className={`mb-24 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.02] border border-white/[0.08] mb-5 backdrop-blur-md group hover:border-white/[0.15] transition-colors duration-300">
-            <Sparkles size={12} className="text-[#FCB045] animate-spin-[duration:4s]" />
-            <span className="text-[10px] font-semibold tracking-[0.2em] uppercase bg-gradient-to-r from-[#FD1D1D] to-[#FCB045] bg-clip-text text-transparent">Get In Touch</span>
+            <Sparkles size={12} className="text-[#7CFF00] animate-spin-[duration:4s]" />
+            <span className="text-[10px] font-semibold tracking-[0.2em] uppercase bg-gradient-to-r from-[#7CFF00] to-[#A6FF00] bg-clip-text text-transparent">Get In Touch</span>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6 items-end">
             <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1.05]">
               Let’s design <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD1D1D] via-[#FCB045] to-[#FD1D1D] bg-[length:200%_auto] animate-pulse">new standards.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7CFF00] via-[#A6FF00] to-[#7CFF00] bg-[length:200%_auto] animate-pulse">new standards.</span>
             </h2>
             <p className="text-neutral-400 text-sm md:text-base font-light leading-relaxed max-w-md md:justify-self-end border-l border-white/[0.05] pl-4">
               Have an ambitious vision, platform deployment, or premium creative infrastructure to map out? Drop a transmission below.
@@ -128,17 +128,17 @@ export const ContactSection: React.FC = () => {
               href={href}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="group relative bg-gradient-to-br from-white/[0.03] to-white/[0.005] backdrop-blur-3xl border-t border-l border-white/[0.1] border-r-transparent border-b-transparent p-6 rounded-2xl flex flex-col justify-between h-40 transition-all duration-500 hover:border-t-[#FCB045]/40 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8)]"
+              className="group relative bg-gradient-to-br from-white/[0.03] to-white/[0.005] backdrop-blur-3xl border-t border-l border-white/[0.1] border-r-transparent border-b-transparent p-6 rounded-2xl flex flex-col justify-between h-40 transition-all duration-500 hover:border-t-[#7CFF00]/40 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8)]"
             >
               {/* Corner Accent Glow Lines */}
-              <div className="absolute top-0 right-0 w-12 h-[1px] bg-gradient-to-r from-transparent to-neutral-800 group-hover:to-[#FCB045]/60 transition-all duration-500" />
-              <div className="absolute bottom-0 left-0 w-[1px] h-12 bg-gradient-to-b from-transparent to-neutral-800 group-hover:to-[#FD1D1D]/60 transition-all duration-500" />
+              <div className="absolute top-0 right-0 w-12 h-[1px] bg-gradient-to-r from-transparent to-neutral-800 group-hover:to-[#7CFF00]/60 transition-all duration-500" />
+              <div className="absolute bottom-0 left-0 w-[1px] h-12 bg-gradient-to-b from-transparent to-neutral-800 group-hover:to-[#7CFF00]/60 transition-all duration-500" />
 
               <div className="flex items-start justify-between">
-                <div className="w-10 h-10 rounded-xl bg-black/40 border border-white/[0.05] flex items-center justify-center transition-all duration-500 group-hover:scale-105 group-hover:border-[#FD1D1D]/30 group-hover:shadow-[0_0_15px_rgba(253,29,29,0.15)]">
+                <div className="w-10 h-10 rounded-xl bg-black/40 border border-white/[0.05] flex items-center justify-center transition-all duration-500 group-hover:scale-105 group-hover:border-[#7CFF00]/30 group-hover:shadow-[0_0_15px_rgba(124,255,0,0.15)]">
                   <Icon size={16} className="text-neutral-400 group-hover:text-white transition-colors" />
                 </div>
-                <ArrowUpRight size={14} className="text-neutral-600 group-hover:text-[#FCB045] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                <ArrowUpRight size={14} className="text-neutral-600 group-hover:text-[#7CFF00] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
               </div>
 
               <div>
@@ -157,7 +157,7 @@ export const ContactSection: React.FC = () => {
             <div className="space-y-4">
               <h3 className="text-2xl md:text-3xl font-extrabold text-neutral-100 tracking-tight">
                 Global Collaboration <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FD1D1D] to-[#FCB045]">Hub Active.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7CFF00] to-[#A6FF00]">Hub Active.</span>
               </h3>
               <p className="text-neutral-400 text-sm md:text-base leading-relaxed font-light">
                 Whether expanding technical ecosystems, scaling branding guidelines, or initiating bespoke engineering tasks, I ensure absolute product precision from discovery to delivery.
@@ -181,7 +181,7 @@ export const ContactSection: React.FC = () => {
             <div className="relative bg-gradient-to-b from-white/[0.03] to-transparent border-t border-l border-white/[0.1] border-r-transparent border-b-transparent backdrop-blur-3xl rounded-3xl p-6 md:p-8 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.8)] group/form overflow-hidden">
               
               {/* Dynamic Laser-Scan Line Animation on Form Hover */}
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#FCB045]/40 to-transparent -translate-x-full group-hover/form:translate-x-full transition-transform duration-[1500ms] ease-out pointer-events-none" />
+              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#7CFF00]/40 to-transparent -translate-x-full group-hover/form:translate-x-full transition-transform duration-[1500ms] ease-out pointer-events-none" />
 
               {/* Success Alert Banner */}
               {submitted && (
@@ -213,9 +213,9 @@ export const ContactSection: React.FC = () => {
                   variant="primary" 
                   size="lg" 
                   isLoading={loading} 
-                  className="w-full py-4 rounded-xl font-bold tracking-widest text-xs text-white uppercase relative overflow-hidden transition-all duration-500 shadow-xl shadow-black transform hover:-translate-y-0.5 active:translate-y-0 group cursor-pointer"
+                  className="w-full py-4 rounded-xl font-bold tracking-widest text-xs text-black uppercase relative overflow-hidden transition-all duration-500 shadow-xl shadow-black transform hover:-translate-y-0.5 active:translate-y-0 group cursor-pointer"
                   style={{
-                    background: 'linear-gradient(135deg, #FD1D1D, #FCB045)'
+                    background: 'linear-gradient(135deg, #7CFF00, #A6FF00)'
                   }}
                 >
                   <div className="flex items-center justify-center gap-2 relative z-10">

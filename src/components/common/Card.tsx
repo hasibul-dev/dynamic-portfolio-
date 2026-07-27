@@ -32,7 +32,7 @@ export const CardHeader: React.FC<CardHeaderProps> = ({
   ...props
 }) => {
   return (
-    <div className={cn('pb-4 border-b border-gray-700', className)} {...props}>
+    <div className={cn('pb-4 border-b border-[#111111]', className)} {...props}>
       {children}
       {title && <h3 className="text-xl font-semibold">{title}</h3>}
       {description && <p className="text-gray-400 text-sm mt-1">{description}</p>}
@@ -58,7 +58,7 @@ interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const CardFooter: React.FC<CardFooterProps> = ({ className, children, ...props }) => {
   return (
-    <div className={cn('pt-4 border-t border-gray-700 flex justify-end gap-2', className)} {...props}>
+    <div className={cn('pt-4 border-t border-[#111111] flex justify-end gap-2', className)} {...props}>
       {children}
     </div>
   );

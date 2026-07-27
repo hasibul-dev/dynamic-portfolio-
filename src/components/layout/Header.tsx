@@ -70,36 +70,40 @@ export const Header: React.FC = () => {
       {/* Modern navigation container bar */}
       <nav className={`max-w-[1700px] mx-auto px-6 py-3.5 flex items-center justify-between transition-all duration-500 rounded-2xl border backdrop-blur-md ${
         scrolled 
-          ? 'bg-neutral-950/80 border-[#FD1D1D]/20 shadow-xl shadow-black/40' 
-          : 'bg-white/[0.02] border-white/5 shadow-sm'
+          ? 'bg-neutral-950/85 border-[#7CFF00]/20 shadow-xl shadow-black/60' 
+          : 'bg-neutral-950/40 border-white/10 shadow-sm'
       }`}>
         
-        {/* Logo */}
-        <a href="/" onClick={handleHomeClick} className="group flex items-center gap-3 relative select-none">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#FD1D1D] via-[#FCB045] to-[#FD1D1D] bg-[length:200%_auto] p-[1.5px] shadow-lg shadow-[#FD1D1D]/10 group-hover:bg-[100%_center] group-hover:scale-[1.03] transition-all duration-700 ease-out">
-            <div className="w-full h-full rounded-[10px] bg-[#030303] flex items-center justify-center p-1.5 overflow-hidden">
+        {/* Clear & High-Contrast Logo Area */}
+        <a href="/" onClick={handleHomeClick} className="group flex items-center gap-3.5 relative select-none">
+          {/* Logo Icon Wrapper */}
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#7CFF00] via-[#A6FF00] to-[#7CFF00] p-[1.5px] shadow-md shadow-[#7CFF00]/15 group-hover:shadow-[#7CFF00]/30 transition-all duration-300">
+            <div className="w-full h-full rounded-[10px] bg-[#080808] flex items-center justify-center p-1 overflow-hidden border border-white/10">
               <img 
                 src={logoImg} 
-                alt="Hasibul Hasan Shanto" 
-                className="w-full h-full object-contain transform group-hover:scale-105 group-hover:rotate-3 transition-transform duration-500" 
+                alt="Hasibul Hasan Shanto Logo" 
+                className="w-full h-full object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300" 
               />
             </div>
           </div>
 
+          {/* Clean High-Contrast Text Name */}
           <div className="flex flex-col">
             <span 
-              className="text-sm md:text-base font-black tracking-wide bg-gradient-to-r from-[#FD1D1D] via-[#FCB045] to-[#FD1D1D] bg-[length:200%_auto] bg-clip-text text-transparent group-hover:bg-[100%_center] transition-all duration-700 ease-out uppercase" 
+              className="text-base sm:text-lg font-black tracking-wider text-white group-hover:text-[#7CFF00] transition-colors duration-300 uppercase leading-none" 
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
-              Hasibul Hasan Shanto
+              Hasibul Hasan <span className="text-[#7CFF00]">Shanto</span>
             </span>
-            <div className="h-[2px] bg-gradient-to-r from-[#FD1D1D] to-transparent w-4 group-hover:w-full transition-all duration-500 mt-0.5 rounded-full" />
+            <span className="text-[10px] font-bold text-neutral-400 tracking-widest uppercase mt-1">
+              Portfolio
+            </span>
           </div>
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center flex-1 justify-center">
-          <div className="flex items-center gap-1 bg-neutral-900/60 border border-white/[0.04] p-1.5 rounded-full backdrop-blur-sm shadow-inner">
+          <div className="flex items-center gap-1 bg-neutral-900/80 border border-white/[0.08] p-1.5 rounded-full backdrop-blur-md shadow-inner">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -111,7 +115,6 @@ export const Header: React.FC = () => {
               </a>
             ))}
           </div>
-
         </div>
 
         {/* Desktop Right Actions */}
@@ -119,9 +122,9 @@ export const Header: React.FC = () => {
           <a
             href="#contact"
             onClick={handleLetsTalk}
-            className="ml-2 px-5 py-2.5 text-sm font-extrabold text-white bg-gradient-to-r from-[#FD1D1D]/10 to-[#FCB045]/10 border border-[#FD1D1D]/60 hover:border-[#FCB045] rounded-xl transition-all duration-300 shadow-md hover:shadow-[#FD1D1D]/20 hover:scale-[1.02]"
+            className="ml-2 px-5 py-2.5 text-sm font-extrabold text-black bg-gradient-to-r from-[#7CFF00] to-[#A6FF00] border border-[#7CFF00] rounded-xl transition-all duration-300 shadow-md shadow-[#7CFF00]/10 hover:shadow-[#7CFF00]/25 hover:scale-[1.02]"
           >
-            Let’s Talk
+            Let's Talk
           </a>
         </div>
 
@@ -145,7 +148,7 @@ export const Header: React.FC = () => {
               key={link.label}
               href={link.onClick ? '/' : `/${link.hash}`}
               onClick={link.onClick ? link.onClick : (e) => handleNavClick(e, link.hash)}
-              className="block px-4 py-2.5 text-neutral-300 hover:text-white bg-neutral-900/30 hover:bg-neutral-900/80 rounded-xl transition-all duration-300 text-[15px] font-bold cursor-pointer"
+              className="block px-4 py-2.5 text-neutral-300 hover:text-white bg-neutral-900/40 hover:bg-neutral-900/80 rounded-xl transition-all duration-300 text-[15px] font-bold cursor-pointer"
             >
               {link.label}
             </a>
@@ -155,9 +158,9 @@ export const Header: React.FC = () => {
             <a
               href="#contact"
               onClick={handleLetsTalk}
-              className="mt-3 block text-center px-4 py-2.5 text-white bg-gradient-to-r from-[#FD1D1D]/20 to-[#FCB045]/20 border border-[#FD1D1D]/40 hover:border-[#FCB045] rounded-xl transition-colors duration-300 text-sm font-extrabold"
+              className="mt-3 block text-center px-4 py-2.5 text-black bg-gradient-to-r from-[#7CFF00] to-[#A6FF00] border border-[#7CFF00] rounded-xl transition-colors duration-300 text-sm font-extrabold"
             >
-              Let’s Talk
+              Let's Talk
             </a>
           </div>
 

@@ -37,7 +37,7 @@ export const AdminLoginPage: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-gray-700 border-t-accent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-12 h-12 border-4 border-gray-700 border-t-[#7CFF00] rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-400">Loading...</p>
         </div>
       </div>
@@ -45,19 +45,19 @@ export const AdminLoginPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-primary flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-[#000000] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-accent mb-2">Admin Panel</h1>
-          <p className="text-gray-400">Sign in to manage your portfolio</p>
+          <h1 className="text-4xl font-bold text-[#7CFF00] mb-2">Admin Panel</h1>
+          <p className="text-[#A0A0A0]">Sign in to manage your portfolio</p>
         </div>
 
         {/* Login Form */}
         <Card className="p-8">
           {error && (
             <div className="mb-6 p-4 bg-red-900 bg-opacity-20 border border-red-700 rounded-lg flex gap-3">
-              <AlertCircle className="text-danger flex-shrink-0 mt-0.5" size={20} />
+              <AlertCircle className="text-[#FF4444] flex-shrink-0 mt-0.5" size={20} />
               <p className="text-red-200 text-sm">{error}</p>
             </div>
           )}
