@@ -6,8 +6,8 @@ export const SITE_URL = (import.meta as any).env.PROD ? 'https://hasibul-hassan.
 // Social links
 export const SOCIAL_LINKS = {
   twitter: 'https://twitter.com',
-  linkedin: 'https://www.linkedin.com/in/hasibul-hassan-shanto-b671b1361/',
-  github: 'https://github.com/shanto812',
+  linkedin: 'https://www.linkedin.com/in/hasibul-dev',
+  github: 'https://github.com/hasibul-dev',
   instagram: 'https://instagram.com',
   facebook: 'https://www.facebook.com/hashibul.hassan.shanto.2024/',
 };
